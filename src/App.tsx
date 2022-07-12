@@ -1,6 +1,12 @@
+import { Form } from './components/Form'
+import { GlobalStyle } from './styles/global'
 
-function App() {
-  return <h1>FormFut</h1>
+export function App() {
+
+  return (
+    <>
+      <GlobalStyle />
+      <Form />
+    </>
+  )
 }
-
-export default App
