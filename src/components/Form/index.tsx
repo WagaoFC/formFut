@@ -1,14 +1,14 @@
-
+import React from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import emailjs from 'emailjs-com'
 import { Container } from './styled'
 
 export function Form() {
 
-    function sendEmail(e) {
+    function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
-        emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.target, 'BAQh7Ti6q9nYik8Yk')
+        emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
 
             .then((result) => {
                 alert("Mensagem enviada com sucesso! 👍");
@@ -17,7 +17,7 @@ export function Form() {
                 alert(error.message)
 
             });
-        e.target.reset()
+        e.currentTarget.reset()
     }
 
     return (
