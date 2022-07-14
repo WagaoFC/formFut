@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+        --background: linear-gradient(90deg, #00b6f6 0%, #0063c7 100%);
     }
 
     * {
@@ -14,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
     html {
         body {
             background: var(--background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
     }

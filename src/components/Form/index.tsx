@@ -1,5 +1,6 @@
 import React from 'react'
 import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import emailjs from 'emailjs-com'
 import { Container } from './styled'
 
@@ -11,10 +12,10 @@ export function Form() {
         emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
 
             .then((result) => {
-                alert("Mensagem enviada com sucesso! 👍");
+                toast.success('Você está na lista ⚽');
 
             }, (error) => {
-                alert(error.message)
+                toast.error('Eitaa! Tente novamente 💀');
 
             });
         e.currentTarget.reset()
@@ -22,9 +23,11 @@ export function Form() {
 
     return (
         <Container>
+            <ToastContainer />
+            <h1>Lista Society 21/07</h1>
             <form onSubmit={sendEmail}>
-                <input type="text" autoFocus required placeholder="Nome" name="name" />
-                <input type="submit" value="Adicionar na lista" />
+                <input type="text" autoFocus required placeholder="Nome ou apelido" name="name" />
+                <input type="submit" value="Enviar meu nome consagrado" />
             </form>
         </Container>
     )
