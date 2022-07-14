@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import emailjs from 'emailjs-com'
 import { Container } from './styled'
+import { FootballLoader } from '../FootballLoader'
 
 export function Form() {
 
@@ -29,6 +30,7 @@ export function Form() {
                 <input type="text" autoFocus required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
+            {/* <FootballLoader /> */}
         </Container>
     )
 }
