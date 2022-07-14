@@ -27,7 +27,7 @@ export function Form() {
             <ToastContainer />
             <h1>Lista Society 21/07</h1>
             <form onSubmit={sendEmail}>
-                <input type="text" autoFocus required placeholder="Nome ou apelido" name="name" />
+                <input type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
             {/* <FootballLoader /> */}
