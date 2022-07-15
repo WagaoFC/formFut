@@ -24,7 +24,7 @@ export function Form() {
 
     return (
         <Container>
-            <ToastContainer />
+            <ToastContainer position="top-center" />
             <h1>Lista Society 21/07</h1>
             <form onSubmit={sendEmail}>
                 <input type="text" required placeholder="Nome ou apelido" name="name" />

@@ -12,7 +12,7 @@ export const Container = styled.div`
 
     h1 {
         position: absolute;
-        margin-bottom: 300px;
+        margin-bottom: 250px;
         color: #fafafa;
         text-transform: uppercase;
         text-shadow: 1px 1px 0px #00b6f6,
