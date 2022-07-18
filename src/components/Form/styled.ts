@@ -7,12 +7,18 @@ export const Container = styled.div`
     background-color: #fafafa;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 50vh;
+    width: 70vh;
     height: 50vh;
 
-    h1 {
-        position: absolute;
-        margin-bottom: 250px;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        width: auto;
+        min-width: 35vh;
+
+        h1 {
         color: #fafafa;
         text-transform: uppercase;
         text-shadow: 1px 1px 0px #00b6f6,
@@ -26,14 +32,6 @@ export const Container = styled.div`
                      1px 20px 30px #0063c7,
                      1px 25px 50px #0063c7;
     }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        width: auto;
-        min-width: 35vh;
 
         input {
             border: none;
