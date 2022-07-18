@@ -7,7 +7,7 @@ export const Container = styled.div`
     background-color: #fafafa;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 70vh;
+    width: 60vh;
     height: 50vh;
 
     form {
@@ -31,19 +31,17 @@ export const Container = styled.div`
                      1px 15px 10px #0063c7,
                      1px 20px 30px #0063c7,
                      1px 25px 50px #0063c7;
-    }
+        }
 
         input {
-            border: none;
+            display: block;
             width: 100%;
             border-radius: 10px;
             padding: 10px;
-
-            :first-child {
-                border: 2px solid #0063c7;
-            }
+            border: 2px solid #0063c7;
 
             :last-child {
+                border: none;
                 cursor: pointer;
                 color: #fafafa;
                 font-weight: 500;
