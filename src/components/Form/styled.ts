@@ -15,8 +15,6 @@ export const Container = styled.div`
         flex-direction: column;
         gap: 50px;
         align-items: center;
-        width: auto;
-        min-width: 35vh;
 
         h1 {
         color: #fafafa;
