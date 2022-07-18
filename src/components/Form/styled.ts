@@ -51,11 +51,15 @@ export const Container = styled.div`
                     box-shadow: #0063c7 0 0 0;
                 }
             }
+
+            @media screen and (max-width: 480px) {
+                width: 80%;
+            }
         }
     }
 
     @media screen and (max-width: 480px) {
-        width: 30vh;
-        height: 30vh;
+        width: auto;
+        height: auto;
     }
 `
