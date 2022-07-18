@@ -55,7 +55,7 @@ export const Container = styled.div`
     }
 
     @media screen and (max-width: 480px) {
-        width: auto;
-        height: auto;
+        width: 30vh;
+        height: 30vh;
     }
 `
