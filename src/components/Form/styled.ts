@@ -60,6 +60,6 @@ export const Container = styled.div`
 
     @media screen and (max-width: 480px) {
         width: auto;
-        height: 100vh;
+        height: 80vh;
     }
 `
