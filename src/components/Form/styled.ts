@@ -32,7 +32,6 @@ export const Container = styled.div`
         }
 
         input {
-            display: block;
             width: 100%;
             border-radius: 10px;
             padding: 10px;
@@ -53,5 +52,10 @@ export const Container = styled.div`
                 }
             }
         }
-    }    
+    }
+
+    @media screen and (max-width: 480px) {
+        width: auto;
+        height: auto;
+    }
 `
