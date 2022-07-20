@@ -7,26 +7,26 @@ import { FootballLoader } from '../FootballLoader'
 
 export function Form() {
 
+    const date = new Date();
+    let day = date.getDay();
+    let hours = date.getHours();
+
+    if (day === 2 && hours > 9) {
+        toast.warning('Tente após às 9h 🕧')
+    }
+
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
-        const date = new Date();
-        let day = date.getDay();
-        let hours = date.getHours();
+        e.preventDefault();
+        emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
 
-        if (day === 5 && hours < 9) {
-            toast.warning('Tente após às 9h 🕧');
-        } else {
-            e.preventDefault();
-            emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
+            .then((result) => {
+                toast.success('Você está na lista ⚽');
 
-                .then((result) => {
-                    toast.success('Você está na lista ⚽');
+            }, (error) => {
+                toast.error('Eitaa! Tente novamente 💀');
 
-                }, (error) => {
-                    toast.error('Eitaa! Tente novamente 💀');
-
-                });
-            e.currentTarget.reset()
-        }
+            });
+        e.currentTarget.reset()
     }
 
     return (
@@ -35,7 +35,7 @@ export function Form() {
             <form onSubmit={sendEmail}>
                 <h1>Lista Society 21/07</h1>
                 <input type="text" required placeholder="Nome ou apelido" name="name" />
-                <input type="submit" value="Enviar meu nome consagrado" />
+                <input id="name" type="submit" value="Enviar meu nome consagrado" />
             </form>
             {/* <FootballLoader /> */}
         </Container>
