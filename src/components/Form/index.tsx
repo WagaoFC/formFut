@@ -39,7 +39,7 @@ export function Form() {
                 <input type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
-            <FootballLoader />
+            {/* <FootballLoader /> */}
         </Container>
     )
 }
