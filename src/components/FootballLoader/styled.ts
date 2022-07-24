@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     position: absolute;
-    margin-top: 300px;
+    margin-top: 180px;
 
     .box {
         margin: 0 auto;
