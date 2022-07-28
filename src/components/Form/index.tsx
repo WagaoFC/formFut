@@ -35,7 +35,7 @@ export function Form() {
         <Container>
             <ToastContainer position="top-center" />
             <form onSubmit={sendEmail}>
-                <h1>Lista Society 28/07</h1>
+                <h1>Lista Society 04/08</h1>
                 <input type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
