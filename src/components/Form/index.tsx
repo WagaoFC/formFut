@@ -13,10 +13,10 @@ export function Form() {
 
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
 
-        if (day === 5 && hours < 9) {
-            toast.warning('Tente após às 9h 🕧', { autoClose: 10000 });
-            return
-        }
+        // if (day === 5 && hours < 9) {
+        //     toast.warning('Tente após às 9h 🕧', { autoClose: 10000 });
+        //     return
+        // }
 
         e.preventDefault();
         emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
