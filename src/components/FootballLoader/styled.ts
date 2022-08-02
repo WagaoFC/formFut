@@ -2,10 +2,12 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     position: absolute;
-    margin-top: 180px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 
     .box {
-        margin: 0 auto;
+        margin: 60vh auto;
         width: 40px;
         height: 140px;
         position: relative;
