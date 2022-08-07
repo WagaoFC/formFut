@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import emailjs from 'emailjs-com'
@@ -7,6 +7,7 @@ import { FootballLoader } from '../FootballLoader'
 
 export function Form() {
 
+    // const [isOpen, setIsOpen] = useState<boolean>(false)
     const date = new Date();
     let day = date.getDay();
     let hours = date.getHours();
@@ -39,7 +40,7 @@ export function Form() {
                 <input type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
-            {/* <FootballLoader /> */}
+            {/* <FootballLoader onClick={() => setIsOpen(!isOpen)} /> */}
         </Container >
     )
 }
