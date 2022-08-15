@@ -7,8 +7,9 @@ import { FootballLoader } from '../FootballLoader'
 
 export function Form() {
 
-    // const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [load, setLoad] = useState<boolean>(false)
     const date = new Date();
+
     let day = date.getDay();
     let hours = date.getHours();
 
@@ -19,28 +20,31 @@ export function Form() {
         //     return
         // }
 
+        setLoad(true);
+
         e.preventDefault();
         emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
 
             .then((result) => {
                 toast.success('Você está na lista ⚽');
+                setLoad(false);
 
             }, (error) => {
                 toast.error('Eitaa! Tente novamente 💀');
-
+                setLoad(false);
             });
         e.currentTarget.reset()
     }
 
     return (
-        < Container >
+        <Container>
             <ToastContainer position="top-center" />
             <form onSubmit={sendEmail}>
-                <h1>Lista Society 11/08</h1>
+                <h1>Lista Society 18/08</h1>
                 <input type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
-            {/* <FootballLoader onClick={() => setIsOpen(!isOpen)} /> */}
+            {(load ? <FootballLoader /> : '')}
         </Container >
     )
 }
