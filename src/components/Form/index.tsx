@@ -8,10 +8,10 @@ import { FootballLoader } from '../FootballLoader'
 export function Form() {
 
     const [load, setLoad] = useState<boolean>(false)
-    const date = new Date();
+    // const date = new Date();
 
-    let day = date.getDay();
-    let hours = date.getHours();
+    // let day = date.getDay();
+    // let hours = date.getHours();
 
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
 
