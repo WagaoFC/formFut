@@ -8,18 +8,8 @@ import { FootballLoader } from '../FootballLoader'
 export function Form() {
 
     const [load, setLoad] = useState<boolean>(false)
-    // const date = new Date();
-
-    // let day = date.getDay();
-    // let hours = date.getHours();
 
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
-
-        // if (day === 5 && hours < 9) {
-        //     toast.warning('Tente após às 9h 🕧', { autoClose: 10000 });
-        //     return
-        // }
-
         setLoad(true);
 
         e.preventDefault();
