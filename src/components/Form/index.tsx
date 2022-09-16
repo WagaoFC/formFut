@@ -8,9 +8,6 @@ import { FootballLoader } from '../FootballLoader'
 export function Form() {
 
     const [load, setLoad] = useState<boolean>(false)
-    // const date = new Date()
-    // let dayWeek = date.getDay()
-    // let dayMonth = date.getDate()
 
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         setLoad(true);
