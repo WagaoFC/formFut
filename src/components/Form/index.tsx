@@ -13,6 +13,7 @@ export function Form() {
         setLoad(true);
 
         e.preventDefault();
+        console.log(document.getElementById("name")?.innerHTML)
         emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
 
             .then((result) => {
@@ -31,7 +32,7 @@ export function Form() {
             <ToastContainer position="top-center" />
             <form onSubmit={sendEmail}>
                 <h1>Lista Society 22/09</h1>
-                <input type="text" required placeholder="Nome ou apelido" name="name" />
+                <input id="name" type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
             {(load ? <FootballLoader /> : '')}
