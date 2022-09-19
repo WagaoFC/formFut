@@ -13,7 +13,6 @@ export function Form() {
         setLoad(true);
 
         e.preventDefault();
-        console.log(document.getElementById("name")?.innerHTML)
         emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
 
             .then((result) => {
