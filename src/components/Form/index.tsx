@@ -20,7 +20,7 @@ export function Form() {
                 setLoad(false);
 
             }, (error) => {
-                toast.error('Eitaa! Tente novamente 💀');
+                toast.error('Eitaa! Tente novamente 😊');
                 setLoad(false);
             });
         e.currentTarget.reset()
