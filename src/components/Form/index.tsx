@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
+import emailjs from 'emailjs-com'
+import { format } from 'date-fns'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import emailjs from 'emailjs-com'
 import { Container } from './styled'
 import { FootballLoader } from '../FootballLoader'
 
 export function Form() {
-
     const [load, setLoad] = useState<boolean>(false)
+    const today = new Date()
+    const formattedDate = format(today, 'dd/MM')
 
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         setLoad(true);
@@ -30,7 +32,7 @@ export function Form() {
         <Container>
             <ToastContainer position="top-center" />
             <form onSubmit={sendEmail}>
-                <h1>Lista Society 08/12</h1>
+                <h1>Lista Society {formattedDate}</h1>
                 <input id="name" type="text" required placeholder="Nome ou apelido" name="name" />
                 <input type="submit" value="Enviar meu nome consagrado" />
             </form>
