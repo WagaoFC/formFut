@@ -10,12 +10,15 @@ export function Form() {
     const [load, setLoad] = useState<boolean>(false)
     const today = new Date()
     const formattedDate = format(today, 'dd/MM')
+    const serviceId = import.meta.env.VITE_YOUR_SERVICE_ID
+    const templateId = import.meta.env.VITE_YOUR_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_YOUR_PUBLIC_KEY
 
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         setLoad(true);
 
         e.preventDefault();
-        emailjs.sendForm('gmailMessage', 'template_7c9ah5n', e.currentTarget, 'BAQh7Ti6q9nYik8Yk')
+        emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey)
 
             .then((result) => {
                 toast.success('Você está na lista ⚽');
